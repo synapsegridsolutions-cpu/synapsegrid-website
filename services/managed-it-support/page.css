@@ -1,0 +1,265 @@
+/* ===================== SUPPORT ===================== */
+        .status {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 26px;
+            box-shadow: var(--shadow);
+            overflow: hidden
+        }
+
+        .status>header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            padding: 18px 22px;
+            border-bottom: 1px solid var(--line);
+            font: 600 .95rem var(--head)
+        }
+
+        .sys {
+            display: grid;
+            grid-template-columns: 150px 1fr 54px;
+            gap: 14px;
+            align-items: center;
+            padding: 10px 22px;
+            font-size: .84rem;
+            font-weight: 500
+        }
+
+        .up {
+            display: flex;
+            gap: 2px;
+            height: 22px
+        }
+
+        .up i {
+            flex: 1;
+            border-radius: 2px;
+            background: var(--green);
+            opacity: .85
+        }
+
+        .up i.w {
+            background: var(--brown)
+        }
+
+        .sys em {
+            font-style: normal;
+            font-weight: 600;
+            font-size: .8rem;
+            color: var(--gt);
+            text-align: right
+        }
+
+        .tix {
+            border-top: 1px solid var(--line);
+            padding: 14px 22px 18px;
+            display: grid;
+            gap: 8px
+        }
+
+        .tix>small {
+            font: 600 .72rem var(--head);
+            letter-spacing: .18em;
+            color: var(--muted)
+        }
+
+        .tic {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 14px;
+            border-radius: 12px;
+            background: var(--bg);
+            border: 1px solid var(--line);
+            font-size: .84rem;
+            animation: fadeup .45s
+        }
+
+        .tic>span:first-child {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis
+        }
+
+        .tic b {
+            font-family: var(--mono);
+            font-weight: 600;
+            margin-right: 8px;
+            color: var(--muted)
+        }
+
+        .tstate {
+            flex: none;
+            font: 600 .72rem var(--head);
+            padding: 4px 10px;
+            border-radius: 99px;
+            background: color-mix(in srgb, var(--brown) 18%, transparent);
+            color: var(--rt)
+        }
+
+        .tstate.ok {
+            background: color-mix(in srgb, var(--green) 18%, transparent);
+            color: var(--gt)
+        }
+
+        .cg {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 56px
+        }
+
+        .cg article {
+            display: flex;
+            gap: 18px;
+            padding: 26px;
+            border-radius: 20px;
+            background: var(--surface);
+            border: 1px solid var(--line);
+            transition: transform .3s, box-shadow .3s
+        }
+
+        .cg article:nth-child(3n+2) .ico {
+            --c: var(--green);
+            --ct: var(--gt)
+        }
+
+        .cg article:nth-child(3n) .ico {
+            --c: var(--brown);
+            --ct: var(--rt)
+        }
+
+        .cg article:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow)
+        }
+
+        .cg .ico {
+            margin: 0;
+            flex: none;
+            width: 48px;
+            height: 48px
+        }
+
+        .cg h3 {
+            font: 600 1.1rem var(--head);
+            margin-bottom: 4px
+        }
+
+        .cg p {
+            color: var(--muted);
+            font-size: .92rem
+        }
+
+        .sla {
+            display: grid;
+            gap: 12px
+        }
+
+        .sla>div {
+            display: grid;
+            grid-template-columns: 56px 1fr auto;
+            gap: 18px;
+            align-items: center;
+            padding: 18px 22px;
+            border-radius: 18px;
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-left: 5px solid var(--c);
+            opacity: 0;
+            transform: translateX(30px);
+            transition: .6s cubic-bezier(.2, .7, .2, 1);
+            transition-delay: calc(var(--k)*.12s + .2s)
+        }
+
+        .in .sla>div {
+            opacity: 1;
+            transform: none
+        }
+
+        .sla b {
+            font: 600 1.15rem var(--head);
+            color: var(--c)
+        }
+
+        .sla h4 {
+            font: 600 1rem var(--head)
+        }
+
+        .sla p {
+            font-size: .85rem;
+            color: var(--muted)
+        }
+
+        .sla em {
+            font: 600 1rem var(--head);
+            font-style: normal;
+            white-space: nowrap
+        }
+
+        .seg {
+            display: inline-flex;
+            padding: 5px;
+            border-radius: 99px;
+            background: var(--bg);
+            border: 1px solid var(--line);
+            margin-bottom: 24px
+        }
+
+        .seg button {
+            border: 0;
+            background: none;
+            padding: 10px 20px;
+            border-radius: 99px;
+            font: 600 .88rem var(--head);
+            color: var(--muted);
+            cursor: pointer;
+            transition: .3s
+        }
+
+        .seg button.on {
+            background: var(--ink);
+            color: #fff
+        }
+
+        [data-theme=dark] .seg button.on {
+            background: var(--brown)
+        }
+
+        .incl {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            gap: 9px;
+            margin-top: 22px;
+            font-size: .92rem
+        }
+
+        .incl li {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            transition: opacity .3s
+        }
+
+        .incl svg {
+            width: 18px;
+            height: 18px;
+            stroke: var(--gt);
+            fill: none;
+            stroke-width: 2.4;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            flex: none
+        }
+
+        .incl li.x {
+            opacity: .35
+        }
+
+        .incl li.x svg {
+            stroke: var(--muted)
+        }

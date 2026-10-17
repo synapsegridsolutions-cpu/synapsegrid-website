@@ -1,0 +1,419 @@
+/* ===================== SECURITY ===================== */
+        .hero.dk {
+            background: #0d1318;
+            color: #EDE7DF;
+            --text: #EDE7DF;
+            --muted: rgba(237, 231, 223, .68);
+            --line: rgba(237, 231, 223, .11);
+            --surface: #16202a;
+            --at: #C79A6B;
+            --bt: #6FA2C2;
+            --gt: #7FA48B;
+            --rt: #C79A6B
+        }
+
+        .hero.dk .btn-primary {
+            background: var(--brown)
+        }
+
+        .hero.dk::before {
+            content: "";
+            position: absolute;
+            width: 720px;
+            height: 720px;
+            right: -200px;
+            top: -160px;
+            background: radial-gradient(circle, rgba(217, 119, 6, .18), transparent 62%)
+        }
+
+        .radar {
+            position: relative;
+            width: min(440px, 100%);
+            aspect-ratio: 1;
+            margin-inline: auto;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(217, 119, 6, .08), transparent 70%);
+            border: 1px solid rgba(199, 154, 107, .4)
+        }
+
+        .radar::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            background: repeating-radial-gradient(circle closest-side, transparent 0 24.6%, rgba(199, 154, 107, .22) 24.6% 25%)
+        }
+
+        .radar::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            background: linear-gradient(transparent calc(50% - .5px), rgba(199, 154, 107, .2) 0 calc(50% + .5px), transparent 0), linear-gradient(90deg, transparent calc(50% - .5px), rgba(199, 154, 107, .2) 0 calc(50% + .5px), transparent 0)
+        }
+
+        .sweep {
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            background: conic-gradient(from 0deg, transparent 0 290deg, rgba(199, 154, 107, 0) 290deg, rgba(199, 154, 107, .5) 360deg);
+            animation: spin 4s linear infinite;
+            z-index: 1
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg)
+            }
+        }
+
+        .blip {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            margin: -5px;
+            border-radius: 50%;
+            background: #E0795A;
+            box-shadow: 0 0 14px #E0795A;
+            opacity: 0;
+            animation: blip 4s infinite;
+            animation-delay: var(--dl);
+            z-index: 2
+        }
+
+        @keyframes blip {
+            0% {
+                opacity: 0;
+                transform: scale(.4)
+            }
+
+            6% {
+                opacity: 1;
+                transform: scale(1.3)
+            }
+
+            45% {
+                opacity: .25;
+                transform: scale(1)
+            }
+
+            100% {
+                opacity: 0
+            }
+        }
+
+        .rc {
+            position: absolute;
+            inset: 41%;
+            border-radius: 50%;
+            background: #16202a;
+            border: 1px solid rgba(199, 154, 107, .5);
+            display: grid;
+            place-items: center;
+            z-index: 3;
+            box-shadow: 0 0 40px rgba(217, 119, 6, .35)
+        }
+
+        .rc svg {
+            width: 50%;
+            fill: none;
+            stroke: #C79A6B;
+            stroke-width: 1.7;
+            stroke-linecap: round;
+            stroke-linejoin: round
+        }
+
+        .radar .pill {
+            position: absolute;
+            left: 50%;
+            bottom: -16px;
+            transform: translateX(-50%);
+            z-index: 3
+        }
+
+        .feed {
+            margin-top: 34px;
+            background: rgba(0, 0, 0, .35);
+            border: 1px solid rgba(237, 231, 223, .1);
+            border-radius: 16px;
+            padding: 14px 18px;
+            font: 500 .78rem/1.9 var(--mono);
+            height: 172px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            max-width: 560px
+        }
+
+        .feed div {
+            animation: fadeup .4s;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: rgba(237, 231, 223, .7)
+        }
+
+        .feed b {
+            font-weight: 600;
+            display: inline-block;
+            width: 76px
+        }
+
+        .feed .r {
+            color: #E0795A
+        }
+
+        .feed .g {
+            color: #7FA48B
+        }
+
+        .feed .y {
+            color: #C79A6B
+        }
+
+        .feed s {
+            text-decoration: none;
+            color: rgba(237, 231, 223, .35);
+            margin-right: 10px
+        }
+
+        .scan {
+            background: #0f151b;
+            color: #EDE7DF;
+            border-radius: 28px;
+            padding: clamp(22px, 3vw, 32px);
+            border: 1px solid rgba(237, 231, 223, .1);
+            box-shadow: var(--shadow)
+        }
+
+        .scan header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            font: 500 .82rem var(--mono);
+            color: rgba(237, 231, 223, .6)
+        }
+
+        .scan .btn {
+            color: #EDE7DF;
+            border-color: rgba(237, 231, 223, .25)
+        }
+
+        .cells {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 6px;
+            margin: 22px 0
+        }
+
+        .cells i {
+            aspect-ratio: 1;
+            border-radius: 5px;
+            background: rgba(237, 231, 223, .07);
+            transition: background .25s, box-shadow .25s
+        }
+
+        .cells i.s {
+            background: rgba(111, 162, 194, .35)
+        }
+
+        .cells i.h {
+            background: #E0795A;
+            box-shadow: 0 0 14px #E0795A
+        }
+
+        .cells i.m {
+            background: #D97706
+        }
+
+        .cells i.l {
+            background: #8FA3B0
+        }
+
+        .cells i.f {
+            background: #7FA48B;
+            box-shadow: 0 0 10px rgba(127, 164, 139, .6)
+        }
+
+        .sev {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px
+        }
+
+        .sev div {
+            padding: 14px;
+            border-radius: 14px;
+            background: rgba(237, 231, 223, .05);
+            font-size: .8rem;
+            color: rgba(237, 231, 223, .6);
+            border-top: 3px solid var(--c)
+        }
+
+        .sev b {
+            display: block;
+            font: 600 1.7rem var(--head);
+            color: #EDE7DF
+        }
+
+        .sl {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-top: 56px;
+            border-top: 1px solid var(--line)
+        }
+
+        .sl article {
+            display: flex;
+            gap: 22px;
+            padding: 34px 30px;
+            border-bottom: 1px solid var(--line);
+            position: relative;
+            overflow: hidden
+        }
+
+        .sl article:nth-child(odd) {
+            border-right: 1px solid var(--line)
+        }
+
+        .sl article::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: -40%;
+            height: 40%;
+            background: linear-gradient(transparent, color-mix(in srgb, var(--a) 20%, transparent));
+            opacity: 0;
+            pointer-events: none
+        }
+
+        .sl article:hover::after {
+            opacity: 1;
+            animation: scanline 1.3s linear infinite
+        }
+
+        @keyframes scanline {
+            to {
+                top: 100%
+            }
+        }
+
+        .sl .ico {
+            flex: none;
+            margin: 0
+        }
+
+        .sl h3 {
+            font: 600 1.2rem var(--head);
+            margin-bottom: 6px
+        }
+
+        .sl p {
+            color: var(--muted);
+            font-size: .95rem
+        }
+
+        .layers {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-top: 56px
+        }
+
+        .rings {
+            position: relative;
+            width: min(460px, 100%);
+            aspect-ratio: 1;
+            margin-inline: auto
+        }
+
+        .ring {
+            position: absolute;
+            inset: calc(var(--k)*10%);
+            border-radius: 50%;
+            border: 1.5px dashed var(--line);
+            display: grid;
+            justify-items: center;
+            align-content: start;
+            transition: .5s
+        }
+
+        .ring span {
+            margin-top: 12px;
+            font: 600 10.5px var(--head);
+            letter-spacing: .18em;
+            color: var(--muted);
+            transition: .5s
+        }
+
+        .ring.on {
+            border: 2px solid var(--a);
+            box-shadow: 0 0 0 8px color-mix(in srgb, var(--a) 10%, transparent), inset 0 0 40px color-mix(in srgb, var(--a) 14%, transparent)
+        }
+
+        .ring.on span {
+            color: var(--at)
+        }
+
+        .rcore {
+            position: absolute;
+            inset: 40%;
+            border-radius: 50%;
+            background: var(--ink);
+            display: grid;
+            place-items: center;
+            color: #EDE7DF;
+            box-shadow: 0 20px 50px -14px color-mix(in srgb, var(--a) 80%, transparent)
+        }
+
+        .rcore svg {
+            width: 44%;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.7;
+            stroke-linecap: round;
+            stroke-linejoin: round
+        }
+
+        .its {
+            display: grid;
+            gap: 10px
+        }
+
+        .it {
+            padding: 22px 24px;
+            border-radius: 20px;
+            border: 1px solid transparent;
+            cursor: default;
+            transition: .35s
+        }
+
+        .it small {
+            font: 600 .72rem var(--head);
+            letter-spacing: .2em;
+            color: var(--muted)
+        }
+
+        .it h3 {
+            font: 600 1.2rem var(--head);
+            margin: 4px 0
+        }
+
+        .it p {
+            color: var(--muted);
+            font-size: .95rem
+        }
+
+        .it.on {
+            background: var(--surface);
+            border-color: var(--line);
+            box-shadow: var(--shadow)
+        }
+
+        .it.on h3 {
+            color: var(--at)
+        }

@@ -1,0 +1,351 @@
+/* ===================== DATA ===================== */
+        .dash {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 26px;
+            box-shadow: var(--shadow);
+            padding: 20px;
+            display: grid;
+            gap: 14px
+        }
+
+        .dash>header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font: 600 .95rem var(--head)
+        }
+
+        .kpis {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px
+        }
+
+        .kpi {
+            padding: 14px;
+            border-radius: 16px;
+            background: var(--bg);
+            border: 1px solid var(--line)
+        }
+
+        .kpi small {
+            font-size: .75rem;
+            color: var(--muted);
+            display: block
+        }
+
+        .kpi b {
+            font: 600 1.3rem var(--head);
+            display: block;
+            margin: 2px 0
+        }
+
+        .kpi em {
+            font-style: normal;
+            font-size: .74rem;
+            font-weight: 600;
+            color: var(--green)
+        }
+
+        .chart {
+            position: relative;
+            border-radius: 16px;
+            background: var(--bg);
+            border: 1px solid var(--line);
+            padding: 14px
+        }
+
+        .chart>header {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            font: 600 .8rem var(--head);
+            margin-bottom: 6px;
+            color: var(--muted)
+        }
+
+        .chart>header span {
+            display: flex;
+            gap: 14px
+        }
+
+        .chart>header i {
+            display: inline-block;
+            width: 14px;
+            height: 3px;
+            border-radius: 2px;
+            background: var(--a);
+            vertical-align: middle;
+            margin-right: 5px
+        }
+
+        .chart>header i.f {
+            background: repeating-linear-gradient(90deg, var(--brown) 0 4px, transparent 4px 7px)
+        }
+
+        .chart svg {
+            width: 100%;
+            height: auto;
+            display: block
+        }
+
+        .chart .gl {
+            stroke: var(--line)
+        }
+
+        .chart .act {
+            fill: none;
+            stroke: var(--a);
+            stroke-width: 3;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-dasharray: 1;
+            stroke-dashoffset: 1;
+            transition: stroke-dashoffset 2s ease
+        }
+
+        .chart .area {
+            fill: color-mix(in srgb, var(--a) 14%, transparent);
+            opacity: 0;
+            transition: opacity 1s 1s
+        }
+
+        .chart .fc {
+            fill: none;
+            stroke: var(--brown);
+            stroke-width: 2.5;
+            stroke-dasharray: 6 6;
+            opacity: 0;
+            transition: opacity .8s 1.9s
+        }
+
+        .chart .band {
+            fill: color-mix(in srgb, var(--brown) 16%, transparent);
+            opacity: 0;
+            transition: opacity .8s 1.9s
+        }
+
+        .chart .pd {
+            fill: var(--a);
+            opacity: 0;
+            transition: opacity .4s 2s
+        }
+
+        .chart.on .act {
+            stroke-dashoffset: 0
+        }
+
+        .chart.on .area,
+        .chart.on .fc,
+        .chart.on .band,
+        .chart.on .pd {
+            opacity: 1
+        }
+
+        .chart .tipc {
+            position: absolute;
+            right: 20px;
+            top: 44px;
+            font: 600 .75rem var(--head);
+            padding: 6px 10px;
+            border-radius: 10px;
+            background: var(--ink);
+            color: #fff;
+            opacity: 0;
+            transform: translateY(6px);
+            transition: .5s 2.3s
+        }
+
+        [data-theme=dark] .chart .tipc {
+            background: var(--brown)
+        }
+
+        .chart.on .tipc {
+            opacity: 1;
+            transform: none
+        }
+
+        .flow {
+            margin-top: 56px;
+            border-radius: 28px;
+            background: var(--surface);
+            border: 1px solid var(--line);
+            padding: clamp(14px, 2.5vw, 28px);
+            box-shadow: var(--shadow)
+        }
+
+        .flow svg {
+            width: 100%;
+            height: auto;
+            display: block
+        }
+
+        .flow .e {
+            fill: none;
+            stroke: var(--line);
+            stroke-width: 2
+        }
+
+        .flow .ea {
+            fill: none;
+            stroke: var(--a);
+            stroke-width: 2.6;
+            stroke-dasharray: 3 14;
+            stroke-linecap: round;
+            animation: flowd 1.1s linear infinite
+        }
+
+        .flow .ea.o {
+            stroke: var(--brown)
+        }
+
+        @keyframes flowd {
+            to {
+                stroke-dashoffset: -17
+            }
+        }
+
+        .flow .nd rect {
+            fill: var(--bg);
+            stroke: var(--line);
+            stroke-width: 1.5
+        }
+
+        .flow .nd text {
+            font: 600 14px var(--head);
+            fill: var(--text)
+        }
+
+        .flow .nd text.s {
+            font: 500 11px var(--body);
+            fill: var(--muted)
+        }
+
+        .flow .hub rect {
+            fill: #1F2933;
+            stroke: var(--a);
+            stroke-width: 2
+        }
+
+        .flow .hub text {
+            fill: #EDE7DF
+        }
+
+        .flow .hub text.s {
+            fill: rgba(237, 231, 223, .65)
+        }
+
+        .flow .cap {
+            font: 600 11px var(--head);
+            letter-spacing: .2em;
+            fill: var(--muted)
+        }
+
+        .chat {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 26px;
+            box-shadow: var(--shadow);
+            overflow: hidden
+        }
+
+        .chat .cbody {
+            padding: 22px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            min-height: 330px
+        }
+
+        .msg {
+            max-width: 86%;
+            padding: 13px 16px;
+            border-radius: 18px;
+            font-size: .93rem;
+            animation: fadeup .4s
+        }
+
+        .msg.u {
+            align-self: flex-end;
+            background: var(--ink);
+            color: #fff;
+            border-bottom-right-radius: 6px
+        }
+
+        [data-theme=dark] .msg.u {
+            background: var(--brown)
+        }
+
+        .msg.a {
+            align-self: flex-start;
+            background: var(--bg);
+            border: 1px solid var(--line);
+            border-bottom-left-radius: 6px
+        }
+
+        .mini {
+            display: flex;
+            align-items: flex-end;
+            gap: 6px;
+            height: 60px;
+            margin-top: 12px
+        }
+
+        .mini i {
+            flex: 1;
+            background: var(--a);
+            border-radius: 4px 4px 0 0;
+            height: var(--h);
+            animation: grow .7s both;
+            animation-delay: calc(var(--k)*.08s);
+            transform-origin: bottom
+        }
+
+        @keyframes grow {
+            from {
+                transform: scaleY(0)
+            }
+        }
+
+        .msg .src {
+            display: block;
+            margin-top: 8px;
+            font-size: .74rem;
+            color: var(--muted)
+        }
+
+        .chat .inp {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            padding: 14px 18px;
+            border-top: 1px solid var(--line);
+            color: var(--muted);
+            font-size: .88rem;
+            align-items: center
+        }
+
+        .typing i {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--muted);
+            margin: 0 2px;
+            animation: bob 1s infinite
+        }
+
+        .typing i:nth-child(2) {
+            animation-delay: .15s
+        }
+
+        .typing i:nth-child(3) {
+            animation-delay: .3s
+        }
+
+        @keyframes bob {
+            50% {
+                transform: translateY(-5px)
+            }
+        }

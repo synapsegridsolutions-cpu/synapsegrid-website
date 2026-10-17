@@ -1,0 +1,344 @@
+/* ===================== CLOUD ===================== */
+        .center {
+            text-align: center
+        }
+
+        .center .crumb,
+        .center .actions {
+            justify-content: center
+        }
+
+        .center p.sub {
+            margin-inline: auto
+        }
+
+        .center .h1 {
+            max-width: 16ch;
+            margin-inline: auto
+        }
+
+        .topo {
+            margin-top: 60px;
+            padding: 20px;
+            border-radius: 30px;
+            background: color-mix(in srgb, var(--surface) 85%, transparent);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--line);
+            box-shadow: var(--shadow);
+            position: relative
+        }
+
+        .topo svg {
+            width: 100%;
+            height: auto;
+            display: block
+        }
+
+        .topo .edge {
+            fill: none;
+            stroke: var(--line);
+            stroke-width: 2
+        }
+
+        .topo .node rect {
+            fill: var(--surface);
+            stroke: var(--line);
+            stroke-width: 1.5
+        }
+
+        .topo .node text {
+            font: 600 13px var(--head);
+            fill: var(--text)
+        }
+
+        .topo .node.key rect {
+            stroke: var(--a);
+            stroke-width: 2
+        }
+
+        .topo .pkt {
+            fill: var(--a)
+        }
+
+        .topo .scale {
+            opacity: 0;
+            transition: opacity .8s
+        }
+
+        .topo.up .scale {
+            opacity: 1
+        }
+
+        .hud {
+            position: absolute;
+            top: 18px;
+            left: 22px;
+            right: 22px;
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            pointer-events: none
+        }
+
+        .pipe {
+            margin-top: 56px;
+            padding: clamp(22px, 3vw, 36px);
+            border-radius: 28px;
+            background: var(--surface);
+            border: 1px solid var(--line);
+            box-shadow: var(--shadow)
+        }
+
+        .stages {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 14px
+        }
+
+        .stg {
+            padding: 20px;
+            border-radius: 18px;
+            border: 1px solid var(--line);
+            background: var(--bg);
+            display: grid;
+            gap: 8px;
+            transition: .4s
+        }
+
+        .stg .ic {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            display: grid;
+            place-items: center;
+            background: var(--line);
+            color: var(--muted);
+            transition: .4s;
+            margin-bottom: 6px
+        }
+
+        .stg .ic svg {
+            width: 20px;
+            height: 20px;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 1.8;
+            stroke-linecap: round;
+            stroke-linejoin: round
+        }
+
+        .stg b {
+            font: 600 1rem var(--head)
+        }
+
+        .stg small {
+            color: var(--muted);
+            font: 500 .78rem var(--mono)
+        }
+
+        .stg.run {
+            border-color: var(--a);
+            transform: translateY(-4px)
+        }
+
+        .stg.run .ic {
+            background: color-mix(in srgb, var(--a) 18%, transparent);
+            color: var(--at);
+            animation: breathe .9s infinite
+        }
+
+        .stg.done .ic {
+            background: var(--green);
+            color: #fff
+        }
+
+        .stg.done {
+            border-color: color-mix(in srgb, var(--green) 50%, var(--line))
+        }
+
+        @keyframes breathe {
+            50% {
+                transform: scale(.88)
+            }
+        }
+
+        .pbar {
+            height: 6px;
+            border-radius: 9px;
+            background: var(--line);
+            margin: 26px 0 18px;
+            overflow: hidden
+        }
+
+        .pbar i {
+            display: block;
+            height: 100%;
+            width: 0;
+            background: linear-gradient(90deg, var(--blue), var(--green));
+            transition: width .5s
+        }
+
+        .plog {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            font: 500 .9rem var(--mono);
+            color: var(--muted)
+        }
+
+        .rows {
+            margin-top: 56px;
+            border-top: 1px solid var(--line)
+        }
+
+        .row {
+            --c: var(--a);
+            --ct: var(--at);
+            display: grid;
+            grid-template-columns: 90px 60px 1fr 1.3fr;
+            gap: 24px;
+            align-items: center;
+            padding: 30px 10px;
+            border-bottom: 1px solid var(--line);
+            position: relative;
+            isolation: isolate;
+            transition: padding .4s
+        }
+
+        .row::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, color-mix(in srgb, var(--a) 14%, transparent), transparent);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform .5s cubic-bezier(.3, .7, .2, 1);
+            z-index: -1
+        }
+
+        .row:hover::before {
+            transform: none
+        }
+
+        .row:hover {
+            padding-left: 28px
+        }
+
+        .row .n {
+            font: 600 2.6rem/1 var(--head);
+            color: transparent;
+            -webkit-text-stroke: 1px color-mix(in srgb, var(--a) 60%, var(--line))
+        }
+
+        .row .ico {
+            margin: 0
+        }
+
+        .row h3 {
+            font: 600 1.35rem var(--head)
+        }
+
+        .row p {
+            color: var(--muted)
+        }
+
+        .calc {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 28px;
+            padding: clamp(26px, 3vw, 38px);
+            box-shadow: var(--shadow)
+        }
+
+        .calc label {
+            font: 600 .9rem var(--head);
+            display: flex;
+            justify-content: space-between;
+            gap: 10px
+        }
+
+        .calc label em {
+            font-style: normal;
+            color: var(--at)
+        }
+
+        .big {
+            font: 600 clamp(2rem, 4vw, 3rem)/1.1 var(--head);
+            letter-spacing: -.02em;
+            color: var(--at)
+        }
+
+        .calc .note {
+            font-size: .8rem;
+            color: var(--muted);
+            margin-top: 16px
+        }
+
+        .cmp {
+            display: grid;
+            gap: 10px;
+            margin: 24px 0
+        }
+
+        .cmp div {
+            display: grid;
+            grid-template-columns: 90px 1fr;
+            gap: 12px;
+            align-items: center;
+            font: 600 .8rem var(--head);
+            color: var(--muted)
+        }
+
+        .cmp i {
+            display: block;
+            height: 14px;
+            border-radius: 8px;
+            background: var(--line);
+            transition: width .4s
+        }
+
+        .cmp div:last-child i {
+            background: linear-gradient(90deg, var(--green), var(--blue))
+        }
+
+        .vt {
+            margin-top: 56px;
+            position: relative;
+            display: grid;
+            gap: 40px;
+            padding-left: 76px;
+            max-width: 760px
+        }
+
+        .vt::before,
+        .vt::after {
+            content: "";
+            position: absolute;
+            left: 21px;
+            top: 0;
+            width: 2px
+        }
+
+        .vt::before {
+            bottom: 0;
+            background: var(--line)
+        }
+
+        .vt::after {
+            height: calc(var(--p, 0)*100%);
+            background: linear-gradient(var(--blue), var(--green), var(--brown));
+            transition: height 1.8s cubic-bezier(.3, .7, .2, 1)
+        }
+
+        .vt .step {
+            position: relative
+        }
+
+        .vt .step b {
+            position: absolute;
+            left: -76px;
+            top: -6px;
+            margin: 0
+        }

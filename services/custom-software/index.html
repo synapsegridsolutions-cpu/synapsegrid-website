@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Custom software development — SynapseGrid Solutions</title>
+    <meta name="description" content="Web platforms, mobile apps and internal tools engineered around your real workflows. Built clean, tested properly and designed to scale with you.">
+    <link rel="icon" type="image/svg+xml" href="../../assets/synapsegrid-icon.svg">
+    <script>try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; window.scrollTo(0, 0); var t = localStorage.getItem('sg_theme'); if (t) document.documentElement.dataset.theme = t } catch (e) { }</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <noscript>
+        <style>
+            #curtain {
+                display: none
+            }
+        </style>
+    </noscript>
+    <link rel="stylesheet" href="../shared/base.css">
+    <link rel="stylesheet" href="page.css">
+</head>
+
+<body class="p-software" style="--a: var(--blue); --at: var(--bt);">
+    <div id="curtain">
+        <div class="ci" id="curtainIcon"><svg viewBox="0 0 24 24" class="" aria-hidden="true"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/></svg></div>
+    </div>
+    <div id="progress"></div>
+
+    <nav id="nav">
+        <div class="wrap">
+            <a href="../../" class="lockup" id="brand" aria-label="SynapseGrid Solutions home">
+                <svg viewBox="215 56 352 284" aria-hidden="true"><g transform="translate(194.89,38.04) scale(.4279)">
+<defs><radialGradient id="hf1" gradientUnits="userSpaceOnUse" cx="182" cy="455" r="57"><stop offset="0" stop-color="#EDE7DF"/><stop offset=".28" stop-color="#EDE7DF"/><stop offset="1" stop-color="#A67C52"/></radialGradient></defs>
+<g><line class="c-line" x1="182" y1="455" x2="203" y2="292"/><line class="c-line" x1="182" y1="455" x2="99" y2="397"/><line class="c-line" x1="182" y1="455" x2="304" y2="427"/><line class="c-line" x1="182" y1="455" x2="72" y2="549"/><line class="c-line" x1="182" y1="455" x2="266" y2="605"/></g>
+<circle class="c-brown" cx="203" cy="292" r="32"/><circle class="c-brown" cx="99" cy="397" r="26"/><circle class="c-brown" cx="72" cy="549" r="32"/><circle class="c-brown" cx="266" cy="605" r="32"/><circle class="c-hub" cx="304" cy="427" r="26"/>
+<path class="hubshape" d="M137.7,424.1 Q179.6,449.5 188.9,401.4 Q186.0,450.6 234.6,442.9 Q187.5,457.4 208.4,502.1 Q180.9,460.9 140.9,490.1 Q176.0,455.3 137.7,424.1 Z" fill="url(#hf1)" stroke="url(#hf1)" stroke-width="6" stroke-linejoin="round"/>
+<g class="mono"><path class="c-blue" d="M765,56 H450 A157,157 0 0 0 450,370 H650 L688,292 H450 A79,79 0 0 1 450,134 H712 Z"/><path class="c-green" d="M688,292 A156,156 0 0 1 844,448 H766 A78,78 0 0 0 688,370 H650 Z"/><path class="c-dark" d="M360.2,448 A253,253 0 0 0 783.9,690.9 L729.5,636.5 A176,176 0 0 1 441,448 Z"/><path class="c-brown" d="M600,497 H857.6 A253,253 0 0 1 783.9,690.9 L729.5,636.5 A176,176 0 0 0 771.9,568 H600 Z"/></g>
+</g></svg><span><span class="word">Synapse<b>Grid</b></span><span class="sub">SOLUTIONS</span></span>
+            </a>
+            <ul id="menu">
+                <li><a href="../../#services" class="on">Services</a></li>
+                <li><a href="../../#why">Why us</a></li>
+                <li><a href="../../#process">Process</a></li>
+                <li><a href="../../#contact">Contact</a></li>
+            </ul>
+            <div class="nav-r">
+                <button class="theme" id="theme" type="button" aria-label="Switch light or dark theme">
+                    <svg class="i-moon" viewBox="0 0 24 24">
+                        <path d="M20 14.5A8 8 0 019.5 4 8 8 0 1020 14.5z" />
+                    </svg>
+                    <svg class="i-sun" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="4" />
+                        <path
+                            d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+                    </svg>
+                </button>
+                <a href="../../?topic=Custom%20software#contact" class="btn btn-primary" id="navCta">Start a project</a>
+                <button class="burger" id="burger" aria-expanded="false" aria-controls="menu">Menu</button>
+            </div>
+        </div>
+    </nav>
+
+    <main id="app">
+
+<header class="hero" id="top"><div class="aurora"></div><div class="gridbg"></div>
+  <div class="wrap in"><div class="split">
+    <div><div class="crumb rise" style="--d:.1s"><a href="../../">Home</a><span>/</span><a href="../../#services">Services</a><span>/</span><b>Custom software</b></div><h1 class="h1"><span class="w" style="--i:0"><span>Software</span></span> <span class="w" style="--i:1"><span>shaped</span></span> <span class="w" style="--i:2"><span>around</span></span> <span class="w g" style="--i:3"><span>how</span></span> <span class="w g" style="--i:4"><span>you</span></span> <span class="w g" style="--i:5"><span>work.</span></span></h1><p class="sub rise" style="--d:.7s">Web platforms, mobile apps and internal tools engineered around your real workflows. Built clean, tested properly and designed to scale with you.</p><div class="actions rise" style="--d:.85s"><a href="../../?topic=Custom%20software#contact" class="btn btn-primary">Book a free consultation</a><a href="#included" class="btn btn-ghost">See what's included</a></div></div>
+    <div class="ide rise" style="--d:.5s" aria-hidden="true">
+      <div class="bar"><i></i><i></i><i></i><span>App.tsx · live preview</span></div>
+      <pre id="code"></pre>
+      <div class="prev">
+        <div class="pi pv-nav"><span class="dot"></span><span class="ln" style="width:50px"></span><span style="flex:1"></span><span class="ln" style="width:24px"></span><span class="ln" style="width:24px"></span><span class="ln" style="width:24px"></span></div>
+        <div class="pi pv-hero"><span class="ln" style="width:70%;height:10px;background:var(--text);opacity:.8"></span><span class="ln" style="width:50%"></span><span class="pv-btn"></span></div>
+        <div class="pi pv-cards"><div><span class="ln" style="width:60%"></span><b>1,284</b></div><div><span class="ln" style="width:60%"></span><b>₹8.4L</b></div><div><span class="ln" style="width:60%"></span><b>97%</b></div></div>
+        <div class="pi pv-chart"><i style="--h:35%"></i><i style="--h:55%"></i><i style="--h:42%"></i><i style="--h:70%"></i><i style="--h:60%"></i><i style="--h:85%"></i><i style="--h:74%"></i></div>
+        <span class="badge">✓ Compiled in 1.2s</span>
+      </div>
+    </div>
+  </div><div class="sstats rise" style="--d:1s" id="stats"><div class="st"><b data-n="2" data-d="0" data-p="" data-s=" wk">0 wk</b><span>Release cycles</span></div><div class="st"><b data-n="100" data-d="0" data-p="" data-s="%">0%</b><span>Code ownership is yours</span></div><div class="st"><b data-n="1" data-d="0" data-p="" data-s=" day">0 day</b><span>Reply to every enquiry</span></div><div class="st"><b>24/7</b><span>Post-launch monitoring</span></div></div></div>
+</header>
+<div class="switch"><div class="wrap"><small>ALL SERVICES</small><a href="../custom-software/" class="on" aria-current="page"><svg viewBox="0 0 24 24" class="" aria-hidden="true"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/></svg>Custom software</a><a href="../cloud-devops/" class="" ><svg viewBox="0 0 24 24" class="" aria-hidden="true"><path d="M7 18a4 4 0 010-8 5 5 0 019.6-1A4.5 4.5 0 0117 18z"/></svg>Cloud & DevOps</a><a href="../cybersecurity/" class="" ><svg viewBox="0 0 24 24" class="" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6zM9 12l2 2 4-4"/></svg>Cybersecurity</a><a href="../data-ai/" class="" ><svg viewBox="0 0 24 24" class="" aria-hidden="true"><path d="M4 20V4M4 20h16M8 16v-5M13 16V8M18 16v-9"/></svg>Data & AI</a><a href="../it-consulting/" class="" ><svg viewBox="0 0 24 24" class="" aria-hidden="true"><path d="M3 12a9 9 0 1018 0 9 9 0 10-18 0M15.5 8.5l-2 5-5 2 2-5z"/></svg>IT consulting</a><a href="../managed-it-support/" class="" ><svg viewBox="0 0 24 24" class="" aria-hidden="true"><path d="M4 14v-2a8 8 0 0116 0v2M4 14h3v5H4zM17 14h3v5h-3z"/></svg>Managed IT support</a></div></div>
+<section class="block" id="included"><div class="wrap">
+  <div class="head rv"><div><div class="kicker">What we build</div><h2>One team for every surface your product lives on.</h2></div><p class="lead" style="margin:0">Web, mobile, internal tools and the APIs between them, designed and engineered together.</p></div>
+  <div class="show rv" data-go="show">
+    <div class="tabs" role="tablist"><button class="tab on" role="tab"><b><svg viewBox="0 0 24 24" class="" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5zM3 13l9 5 9-5"/></svg>Web platforms</b><p>Portals, SaaS products and marketplaces that load fast and work for everyone.</p></button><button class="tab" role="tab"><b><svg viewBox="0 0 24 24" class="" aria-hidden="true"><path d="M8 2h8a2 2 0 012 2v16a2 2 0 01-2 2H8a2 2 0 01-2-2V4a2 2 0 012-2zM11 18h2"/></svg>Mobile apps</b><p>One codebase with a native feel on iOS and Android. Store releases handled for you.</p></button><button class="tab" role="tab"><b><svg viewBox="0 0 24 24" class="" aria-hidden="true"><path d="M3 4h18v12H3zM8 20h8M12 16v4"/></svg>Internal tools</b><p>Admin panels and approval flows that replace spreadsheet chaos.</p></button><button class="tab" role="tab"><b><svg viewBox="0 0 24 24" class="" aria-hidden="true"><path d="M9 2v6M15 2v6M6 8h12v3a6 6 0 01-12 0zM12 17v5"/></svg>APIs & integrations</b><p>Clean, documented APIs that connect your CRM, ERP and payments.</p></button></div>
+    <div class="stage" aria-hidden="true"><div class="mock on"><div class="win m-br"><div class="bar"><i></i><i></i><i></i><span class="url">yourproduct.com</span></div><div class="mb">
+        <div class="mb-hero"><span class="ln" style="width:60%;height:14px;background:var(--text);opacity:.8"></span><span class="ln" style="width:42%"></span><span class="pv-btn"></span></div>
+        <div class="mb-grid"><div><i></i><span class="ln" style="width:70%"></span><span class="ln" style="width:40%"></span></div><div><i></i><span class="ln" style="width:70%"></span><span class="ln" style="width:40%"></span></div><div><i></i><span class="ln" style="width:70%"></span><span class="ln" style="width:40%"></span></div><div><i></i><span class="ln" style="width:70%"></span><span class="ln" style="width:40%"></span></div></div></div></div></div><div class="mock"><div class="m-ph"><div class="ph-top"><span>Orders</span><span class="dot"></span></div>
+        <div class="ph-row"><i></i><div><span class="ln" style="width:80%"></span><span class="ln" style="width:50%"></span></div><em>₹1,240</em></div><div class="ph-row"><i></i><div><span class="ln" style="width:80%"></span><span class="ln" style="width:50%"></span></div><em>₹860</em></div><div class="ph-row"><i></i><div><span class="ln" style="width:80%"></span><span class="ln" style="width:50%"></span></div><em>₹2,315</em></div><div class="ph-row"><i></i><div><span class="ln" style="width:80%"></span><span class="ln" style="width:50%"></span></div><em>₹540</em></div><div class="ph-row"><i></i><div><span class="ln" style="width:80%"></span><span class="ln" style="width:50%"></span></div><em>₹1,080</em></div>
+        <div class="ph-tab"><i></i><i></i><i></i><i></i></div></div></div><div class="mock"><div class="win m-tl"><div class="tl-side"><span class="ln"></span><span class="ln"></span><span class="ln"></span><span class="ln"></span><span class="ln"></span><span class="ln"></span></div><div class="tl-main"><div class="tl-head"><span>Approvals</span><span class="pv-btn"></span></div>
+        <div class="tl-row"><span class="ln" style="width:30%"></span><span class="ln" style="width:16%"></span><em class="tag" style="--c:var(--green);--ct:var(--gt)">Approved</em></div><div class="tl-row"><span class="ln" style="width:35%"></span><span class="ln" style="width:16%"></span><em class="tag" style="--c:var(--brown);--ct:var(--rt)">Pending</em></div><div class="tl-row"><span class="ln" style="width:40%"></span><span class="ln" style="width:16%"></span><em class="tag" style="--c:var(--blue);--ct:var(--bt)">Review</em></div><div class="tl-row"><span class="ln" style="width:45%"></span><span class="ln" style="width:16%"></span><em class="tag" style="--c:var(--green);--ct:var(--gt)">Approved</em></div><div class="tl-row"><span class="ln" style="width:50%"></span><span class="ln" style="width:16%"></span><em class="tag" style="--c:var(--brown);--ct:var(--rt)">Pending</em></div></div></div></div><div class="mock"><div class="m-api"><div class="api-req"><b>GET</b> /api/v1/orders?status=open <em>200 OK · 84 ms</em></div><pre>{
+  <span class="k">"data"</span>: [
+    { <span class="k">"id"</span>: "ord_1284", <span class="k">"total"</span>: 1240, <span class="k">"status"</span>: "paid" },
+    { <span class="k">"id"</span>: "ord_1285", <span class="k">"total"</span>: 860, <span class="k">"status"</span>: "packed" }
+  ],
+  <span class="k">"next"</span>: "/api/v1/orders?page=2"
+}</pre></div></div></div>
+  </div>
+</div></section>
+<section class="block alt"><div class="wrap"><div class="head rv"><div><div class="kicker">Capabilities</div><h2>Everything you need, from one connected team.</h2></div><p class="lead" style="margin:0">Pick one capability or combine them. Either way, the same engineers plan, build and support it.</p></div><div class="bento"><article class="card rv"><span class="num" aria-hidden="true">01</span><div class="ico"><svg viewBox="0 0 24 24" class="" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5zM3 13l9 5 9-5"/></svg></div><h3>Web platforms</h3><p>Customer portals, SaaS products and marketplaces with fast, accessible front ends.</p></article><article class="card rv"><span class="num" aria-hidden="true">02</span><div class="ico"><svg viewBox="0 0 24 24" class="" aria-hidden="true"><path d="M8 2h8a2 2 0 012 2v16a2 2 0 01-2 2H8a2 2 0 01-2-2V4a2 2 0 012-2zM11 18h2"/></svg></div><h3>Mobile apps</h3><p>iOS and Android apps from one codebase, published and maintained for you.</p></article><article class="card rv"><span class="num" aria-hidden="true">03</span><div class="ico"><svg viewBox="0 0 24 24" class="" aria-hidden="true"><path d="M9 2v6M15 2v6M6 8h12v3a6 6 0 01-12 0zM12 17v5"/></svg></div><h3>APIs & integrations</h3><p>Connect your CRM, ERP, payments and the tools your team already relies on.</p></article><article class="card rv"><span class="num" aria-hidden="true">04</span><div class="ico"><svg viewBox="0 0 24 24" class="" aria-hidden="true"><path d="M21 12a9 9 0 11-3-6.7M21 4v5h-5"/></svg></div><h3>Legacy modernisation</h3><p>Move ageing systems to modern stacks in safe steps, without stopping the business.</p></article><article class="card rv"><span class="num" aria-hidden="true">05</span><div class="ico"><svg viewBox="0 0 24 24" class="" aria-hidden="true"><path d="M3 4h18v12H3zM8 20h8M12 16v4"/></svg></div><h3>Internal tools</h3><p>Admin panels, workflows and dashboards that replace spreadsheet chaos.</p></article><article class="card rv"><span class="num" aria-hidden="true">06</span><div class="ico"><svg viewBox="0 0 24 24" class="" aria-hidden="true"><path d="M5 12l4 4L19 7"/></svg></div><h3>QA & automated testing</h3><p>Automated test suites so every release ships with confidence.</p></article></div></div></section>
+<section class="block"><div class="wrap"><div class="dark-panel rv" data-go="term">
+  <div><div class="kicker">What you get</div><h2>Results you can see, not just promises.</h2><p class="lead">Every engagement ends with clear, tangible deliverables.</p><ul class="outs"><li style="--k:0"><svg viewBox="0 0 24 24" class="" aria-hidden="true"><path d="M5 12l4 4L19 7"/></svg><span>Full source code and documentation handed over</span></li><li style="--k:1"><svg viewBox="0 0 24 24" class="" aria-hidden="true"><path d="M5 12l4 4L19 7"/></svg><span>Automated tests running on every release</span></li><li style="--k:2"><svg viewBox="0 0 24 24" class="" aria-hidden="true"><path d="M5 12l4 4L19 7"/></svg><span>A staging environment you can click through anytime</span></li><li style="--k:3"><svg viewBox="0 0 24 24" class="" aria-hidden="true"><path d="M5 12l4 4L19 7"/></svg><span>A clear support plan after go-live</span></li></ul></div>
+  <div class="term" aria-hidden="true"><div class="bar"><i></i><i></i><i></i><span>synapsegrid ~ software</span></div><pre id="tout"><span class="caret"></span></pre></div>
+</div></div></section>
+<section class="block alt"><div class="wrap">
+  <div class="head rv"><div><div class="kicker">How we deliver</div><h2>Run like a sprint board, not a black box.</h2></div><p class="lead" style="margin:0">You see every stage, every ticket and every demo as it happens.</p></div>
+  <div class="kb rv"><div class="col"><header>Discovery workshop<em>1</em></header>
+    <div class="tk" style="--k:0"><span class="tag">STEP 01</span><div class="ico"><svg viewBox="0 0 24 24" class="" aria-hidden="true"><path d="M5 11a6 6 0 1012 0 6 6 0 10-12 0M20 20l-4.5-4.5"/></svg></div><h3>Discovery workshop</h3><p>We map users, workflows and must-haves before writing code.</p></div>
+    <div class="tk sm" style="--k:1"><span>User map & priorities</span><span class="av"><i style="--x:var(--blue)"></i><i style="--x:var(--green)"></i><i style="--x:var(--brown)"></i></span></div></div><div class="col"><header>Prototype & UX<em>2</em></header>
+    <div class="tk" style="--k:2"><span class="tag">STEP 02</span><div class="ico"><svg viewBox="0 0 24 24" class="" aria-hidden="true"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4z"/></svg></div><h3>Prototype & UX</h3><p>Clickable designs you can test with real people.</p></div>
+    <div class="tk sm" style="--k:3"><span>Clickable prototype</span><span class="av"><i style="--x:var(--blue)"></i><i style="--x:var(--green)"></i><i style="--x:var(--brown)"></i></span></div></div><div class="col"><header>Agile build<em>3</em></header>
+    <div class="tk" style="--k:4"><span class="tag">STEP 03</span><div class="ico"><svg viewBox="0 0 24 24" class="" aria-hidden="true"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/></svg></div><h3>Agile build</h3><p>Two-week sprints with a working demo at the end of each.</p></div>
+    <div class="tk sm" style="--k:5"><span>Demo every sprint</span><span class="av"><i style="--x:var(--blue)"></i><i style="--x:var(--green)"></i><i style="--x:var(--brown)"></i></span></div></div><div class="col"><header>Launch & handover<em>4</em></header>
+    <div class="tk" style="--k:6"><span class="tag">STEP 04</span><div class="ico"><svg viewBox="0 0 24 24" class="" aria-hidden="true"><path d="M5 15c-1.5 1.5-2 5-2 5s3.5-.5 5-2M9 15l-3-3c2-6 7-9 13-9 0 6-3 11-9 13zM15 9h.01"/></svg></div><h3>Launch & handover</h3><p>Go-live, training, docs and ongoing support.</p></div>
+    <div class="tk sm" style="--k:7"><span>Docs & training</span><span class="av"><i style="--x:var(--blue)"></i><i style="--x:var(--green)"></i><i style="--x:var(--brown)"></i></span></div></div></div>
+</div><div class="stack rv"><div class="kicker">Tools &amp; technologies we use</div><div class="marquee"><div class="track"><span>React</span><span>Next.js</span><span>Node.js</span><span>TypeScript</span><span>Python</span><span>Django</span><span>Flutter</span><span>React Native</span><span>PostgreSQL</span><span>GraphQL</span><span>React</span><span>Next.js</span><span>Node.js</span><span>TypeScript</span><span>Python</span><span>Django</span><span>Flutter</span><span>React Native</span><span>PostgreSQL</span><span>GraphQL</span></div></div></div></section>
+<section class="block"><div class="wrap faq">
+      <div class="rv"><div class="kicker">FAQ</div><h2>Questions we hear often.</h2><p class="lead">Something else on your mind? <a href="../../?topic=Custom%20software#contact" style="color:var(--at);font-weight:600">Ask an engineer →</a></p></div>
+      <div class="rv"><details open><summary>How long does a typical project take?<i aria-hidden="true"></i></summary><p>Smaller tools often ship in a couple of months. Larger platforms are delivered in phases, so you get something usable early rather than waiting for one big launch.</p></details><details><summary>Who owns the code?<i aria-hidden="true"></i></summary><p>You do. Source code, documentation and all account access are handed over to you.</p></details><details><summary>Can you work with our existing systems?<i aria-hidden="true"></i></summary><p>Yes. Most projects involve integrating with tools you already use, and we plan for that from day one.</p></details></div></div></section><section class="block" style="padding-bottom:0"><div class="wrap"><a class="next rv" href="../cloud-devops/"><div><small>NEXT SERVICE</small><h3>Cloud & DevOps</h3></div><span class="arr"><svg viewBox="0 0 24 24" class="" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div></section><section class="block"><div class="wrap"><div class="dark-panel cta rv"><div>
+      <div class="kicker" style="justify-content:center">Let's talk</div><h2>Ready to start your custom software project?</h2>
+      <p class="lead">Tell us what you're working on. An engineer, not a salesperson, will reply within one business day.</p>
+      <div class="actions"><a href="../../?topic=Custom%20software#contact" class="btn" style="background:#EDE7DF;color:#1F2933">Book a free consultation</a>
+      <a href="mailto:hello@yourdomain.com?subject=Custom%20software%20development%20enquiry" class="btn" style="border-color:rgba(237,231,223,.3);color:#EDE7DF">Email us</a></div></div></div></div></section>
+    </main>
+
+    <footer>
+        <div class="wrap">
+            <div class="fgrid">
+                <div>
+                    <div class="lockup" id="flogo">
+                        <svg viewBox="215 56 352 284" aria-hidden="true"><g transform="translate(194.89,38.04) scale(.4279)">
+<defs><radialGradient id="hf2" gradientUnits="userSpaceOnUse" cx="182" cy="455" r="57"><stop offset="0" stop-color="#EDE7DF"/><stop offset=".28" stop-color="#EDE7DF"/><stop offset="1" stop-color="#A67C52"/></radialGradient></defs>
+<g><line class="c-line" x1="182" y1="455" x2="203" y2="292"/><line class="c-line" x1="182" y1="455" x2="99" y2="397"/><line class="c-line" x1="182" y1="455" x2="304" y2="427"/><line class="c-line" x1="182" y1="455" x2="72" y2="549"/><line class="c-line" x1="182" y1="455" x2="266" y2="605"/></g>
+<circle class="c-brown" cx="203" cy="292" r="32"/><circle class="c-brown" cx="99" cy="397" r="26"/><circle class="c-brown" cx="72" cy="549" r="32"/><circle class="c-brown" cx="266" cy="605" r="32"/><circle class="c-hub" cx="304" cy="427" r="26"/>
+<path class="hubshape" d="M137.7,424.1 Q179.6,449.5 188.9,401.4 Q186.0,450.6 234.6,442.9 Q187.5,457.4 208.4,502.1 Q180.9,460.9 140.9,490.1 Q176.0,455.3 137.7,424.1 Z" fill="url(#hf2)" stroke="url(#hf2)" stroke-width="6" stroke-linejoin="round"/>
+<g class="mono"><path class="c-blue" d="M765,56 H450 A157,157 0 0 0 450,370 H650 L688,292 H450 A79,79 0 0 1 450,134 H712 Z"/><path class="c-green" d="M688,292 A156,156 0 0 1 844,448 H766 A78,78 0 0 0 688,370 H650 Z"/><path class="c-dark" d="M360.2,448 A253,253 0 0 0 783.9,690.9 L729.5,636.5 A176,176 0 0 1 441,448 Z"/><path class="c-brown" d="M600,497 H857.6 A253,253 0 0 1 783.9,690.9 L729.5,636.5 A176,176 0 0 0 771.9,568 H600 Z"/></g>
+</g></svg><span><span class="word">Synapse<b>Grid</b></span><span class="sub">SOLUTIONS</span></span>
+                    </div>
+                    <p>Connecting ideas. Building solutions.</p>
+                </div>
+                <div>
+                    <h5>Services</h5>
+                    <ul id="fserv">
+                        <li><a href="../custom-software/">Custom software</a></li>
+                        <li><a href="../cloud-devops/">Cloud & DevOps</a></li>
+                        <li><a href="../cybersecurity/">Cybersecurity</a></li>
+                        <li><a href="../data-ai/">Data & AI</a></li>
+                        <li><a href="../it-consulting/">IT consulting</a></li>
+                        <li><a href="../managed-it-support/">Managed IT support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="../../#why">Why us</a></li>
+                        <li><a href="../../#process">Process</a></li>
+                        <li><a href="../../#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5>Get in touch</h5>
+                    <ul>
+                        <li>hello@yourdomain.com</li>
+                        <li>+91 00000 00000</li>
+                        <li>Pune, India</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="legal"><span>© <span id="yr"></span> SynapseGrid Solutions. All rights
+                    reserved.</span><span>Privacy · Terms</span></div>
+        </div>
+    </footer>
+
+    <script src="../shared/services.js"></script>
+    <script src="../shared/shell.js" defer></script>
+    <script src="page.js" defer></script>
+</body>
+
+</html>

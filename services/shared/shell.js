@@ -1,6 +1,22 @@
 /* ============ SynapseGrid Shared Shell ============ */
 window.HOOK = window.HOOK || {};
 
+// Logo: correct the icon box on every service page (fixes the "G" hanging below its box)
+document.querySelectorAll('.lockup svg[viewBox="215 56 352 284"]').forEach(s => s.setAttribute('viewBox', '212 62 350 303.5'));
+
+// Footer tagline: same width as the words "SynapseGrid", placed under them
+function fitFooterTagline() {
+    const logo = document.getElementById('flogo'), p = logo && logo.nextElementSibling;
+    if (!logo || !p || p.tagName !== 'P') return;
+    const w = logo.querySelector('.word').getBoundingClientRect();
+    p.style.fontSize = '100px';
+    const ls = parseFloat(getComputedStyle(p).letterSpacing) || 0;
+    p.style.fontSize = (100 * w.width / (p.getBoundingClientRect().width - ls)) + 'px';
+    p.style.marginLeft = (w.left - logo.getBoundingClientRect().left) + 'px';
+}
+(document.fonts ? document.fonts.ready : Promise.resolve()).then(fitFooterTagline);
+addEventListener('resize', fitFooterTagline);
+
 // Count-up helper
 function countUp(el) {
     const n = +el.dataset.n, d = +el.dataset.d || 0, p = el.dataset.p || '', s = el.dataset.s || '', c = el.dataset.c, t0 = performance.now(), dur = 1600;

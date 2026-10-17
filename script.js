@@ -57,7 +57,7 @@
         const seen = () => { try { return localStorage.getItem('sg_intro') === '1' || sessionStorage.getItem('sg_intro') === '1'; } catch (e) { return false; } };
         const force = new URLSearchParams(location.search).has('intro');
         const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-        const shouldSkip = reduced || hasHash || ((CONFIG.showIntroOnce || seen()) && !force);
+        const shouldSkip = reduced || hasHash || ((CONFIG.showIntroOnce && seen()) && !force);
 
         if (shouldSkip) {
             document.body.classList.remove('locked');

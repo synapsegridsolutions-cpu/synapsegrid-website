@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Redirecting to SynapseGrid Services...</title>
+<script>
+  const SLUGS = {
+    software: 'custom-software',
+    cloud: 'cloud-devops',
+    security: 'cybersecurity',
+    data: 'data-ai',
+    consulting: 'it-consulting',
+    support: 'managed-it-support'
+  };
+  const p = new URLSearchParams(location.search).get('s');
+  const target = SLUGS[p] || 'custom-software';
+  location.replace(target + '/' + (location.search || '') + (location.hash || ''));
+</script>
+</head>
+<body>
+<p>Redirecting to <a href="custom-software/">SynapseGrid Services</a>...</p>
+</body>
+</html>

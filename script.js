@@ -275,7 +275,7 @@ $$('.card').forEach(c => c.addEventListener('pointermove', e => {
 $('#form').addEventListener('submit', e => {
     e.preventDefault(); const f = new FormData(e.target);
     const body = `Name: ${f.get('name')}\nEmail: ${f.get('email')}\nTopic: ${f.get('topic')}\n\n${f.get('msg')}`;
-    location.href = `mailto:hello@yourdomain.com?subject=${encodeURIComponent('Project enquiry: ' + f.get('topic'))}&body=${encodeURIComponent(body)}`;
+    location.href = `mailto:synapsegridsolutions.com?subject=${encodeURIComponent('Project enquiry: ' + f.get('topic'))}&body=${encodeURIComponent(body)}`;
     $('#fmsg').textContent = 'Opening your email app…';
 });
 
